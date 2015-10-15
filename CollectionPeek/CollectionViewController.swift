@@ -29,6 +29,12 @@ class CollectionViewController: UICollectionViewController {
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let indexPath = collectionView?.indexPathsForSelectedItems()?.first {
+            segue.destinationViewController.view.backgroundColor = colors[indexPath.row]
+        }
+    }
+
     private func randomColor() -> UIColor {
         return UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
     }

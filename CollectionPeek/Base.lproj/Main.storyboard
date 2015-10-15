@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="1618.5" y="532.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Color-->
         <scene sceneID="9CI-Qg-0R1">
             <objects>
-                <viewController id="sqw-ht-xOS" sceneMemberID="viewController">
+                <viewController id="sqw-ht-xOS" customClass="DetailViewController" customModule="CollectionPeek" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lqc-re-JyX"/>
                         <viewControllerLayoutGuide type="bottom" id="nBz-3d-FDv"/>
@@ -234,6 +234,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Color" id="gVI-pQ-72b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ijn-bE-GzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

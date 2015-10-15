@@ -12,6 +12,7 @@
 		F83ED0E71BCF5AD80085E720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83ED0E51BCF5AD80085E720 /* Main.storyboard */; };
 		F83ED0E91BCF5AD80085E720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83ED0E81BCF5AD80085E720 /* Assets.xcassets */; };
 		F83ED0EC1BCF5AD80085E720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83ED0EA1BCF5AD80085E720 /* LaunchScreen.storyboard */; };
+		F83ED0F51BCF64650085E720 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83ED0F41BCF64650085E720 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F83ED0E81BCF5AD80085E720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F83ED0EB1BCF5AD80085E720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F83ED0ED1BCF5AD80085E720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83ED0F41BCF64650085E720 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				F83ED0E11BCF5AD80085E720 /* AppDelegate.swift */,
 				F83ED0E31BCF5AD80085E720 /* CollectionViewController.swift */,
+				F83ED0F41BCF64650085E720 /* DetailViewController.swift */,
 				F83ED0E51BCF5AD80085E720 /* Main.storyboard */,
 				F83ED0E81BCF5AD80085E720 /* Assets.xcassets */,
 				F83ED0EA1BCF5AD80085E720 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83ED0F51BCF64650085E720 /* DetailViewController.swift in Sources */,
 				F83ED0E41BCF5AD80085E720 /* CollectionViewController.swift in Sources */,
 				F83ED0E21BCF5AD80085E720 /* AppDelegate.swift in Sources */,
 			);
