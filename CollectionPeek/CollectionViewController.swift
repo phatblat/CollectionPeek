@@ -10,12 +10,27 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
 
+    private let cellCount = 15
+    private var colors: [UIColor] = []
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        for _ in 0...cellCount {
+            colors.append(randomColor())
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         }
+    }
+
+    private func randomColor() -> UIColor {
+        return UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
     }
 
 }
@@ -29,11 +44,14 @@ extension CollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return cellCount
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SquareCell", forIndexPath: indexPath)
+
+        // Set background color
+        cell.contentView.backgroundColor = colors[indexPath.row]
 
         // Rounded corners
         cell.layer.masksToBounds = true
