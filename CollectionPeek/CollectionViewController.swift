@@ -27,6 +27,8 @@ class CollectionViewController: UICollectionViewController {
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         }
+
+        registerForPreviewingWithDelegate(self, sourceView: collectionView!)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
