@@ -10,7 +10,13 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        }
+    }
 
 }
 
@@ -29,7 +35,7 @@ extension CollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SquareCell", forIndexPath: indexPath)
 
-
+        // Rounded corners
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 10
 
