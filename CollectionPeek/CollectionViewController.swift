@@ -91,6 +91,11 @@ extension CollectionViewController {
 extension CollectionViewController: UIViewControllerPreviewingDelegate {
 
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = collectionView?.indexPathForItemAtPoint(location) {
+            selectedIndexPath = indexPath
+            debugPrint(selectedIndexPath)
+//            previewingContext._viewController.view.backgroundColor = colors[indexPath.row]
+        }
         return nil
     }
 
