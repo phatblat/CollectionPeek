@@ -68,3 +68,17 @@ extension CollectionViewController {
 
 }
 
+// MARK - UIViewControllerPreviewingDelegate
+
+extension CollectionViewController: UIViewControllerPreviewingDelegate {
+
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        return nil
+    }
+
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        presentViewController(viewControllerToCommit, animated: true, completion: nil)
+    }
+
+}
+
