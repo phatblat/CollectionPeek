@@ -70,7 +70,19 @@ extension CollectionViewController {
 
 }
 
-// MARK - UIViewControllerPreviewingDelegate
+// MARK: - UICollectionViewDelegate
+
+extension CollectionViewController {
+
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // Save the selection for use in prepareForSegue
+        selectedIndexPath = indexPath
+        debugPrint(selectedIndexPath)
+    }
+
+}
+
+// MARK: - UIViewControllerPreviewingDelegate
 
 extension CollectionViewController: UIViewControllerPreviewingDelegate {
 
