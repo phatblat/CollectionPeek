@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
 
-    
+
 
 }
 
@@ -29,6 +29,9 @@ extension CollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SquareCell", forIndexPath: indexPath)
 
+
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 10
 
         return cell
     }
