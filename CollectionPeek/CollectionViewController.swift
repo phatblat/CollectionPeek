@@ -10,7 +10,28 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
 
+    
 
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension CollectionViewController {
+
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
+    }
+
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SquareCell", forIndexPath: indexPath)
+
+
+        return cell
+    }
 
 }
 
