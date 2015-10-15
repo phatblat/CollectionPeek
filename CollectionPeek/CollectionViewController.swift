@@ -12,6 +12,7 @@ class CollectionViewController: UICollectionViewController {
 
     private let cellCount = 15
     private var colors: [UIColor] = []
+    private var selectedIndexPath: NSIndexPath?
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -32,7 +33,10 @@ class CollectionViewController: UICollectionViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let indexPath = collectionView?.indexPathsForSelectedItems()?.first {
+//        if let indexPath = collectionView?.indexPathsForSelectedItems()?.first {
+        if let indexPath = selectedIndexPath {
+            debugPrint(selectedIndexPath)
+            debugPrint(colors[indexPath.row])
             segue.destinationViewController.view.backgroundColor = colors[indexPath.row]
         }
     }
